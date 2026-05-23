@@ -9,6 +9,8 @@
 #include <string.h>
 
 int main(void) {
+  // Notice how the bytes after the \0 are different?
+  // with strcmp these two appear equal, with memcmp they do not.
   unsigned char expected[6] = {'A', 'B', '\0', 'X', 'Y', 'Z'};
   unsigned char actual[6] = {'A', 'B', '\0', '1', '2', '3'};
 
